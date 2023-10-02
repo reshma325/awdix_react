@@ -20,7 +20,7 @@ function Homepage() {
 
             <button onClick={() => router('/Count')} >Go To Counter</button>
             <button onClick={() => router('/effect1')} >Go To Effect1</button>
-            <button onClick={() => router('/effect2')} >Go To Effect2</button>
+            <button onClick={() => router('/effect2')} >Go To Effect2</button> 
             <button onClick={() => router('/effect3')} >Go To Effect3</button>
             <button onClick={() => router('/effect4')} >Go To Effect4</button><br />
             <button onClick={() => router('/params')} >Go To Params</button>
@@ -33,10 +33,8 @@ function Homepage() {
             <button onClick={() => router('/register')} >Go To Form</button>
             <button onClick={() => router('/classcomponent')} >Go To ClassComponent</button>
             <button onClick={() => router('/products')} >Go To Products</button><br />
-            <button onClick={() => toast.error("Clickedd")}>Click for toast error</button>
-            <button onClick={() => toast.success("Clickedd")}>Click for toast success</button>
-            {/* <button style={{backgroundColor:"red" , color:"white"}} onClick={() =>toast.error("Error")} >Click For Error</button>
-            <button onClick={() => toast.success("Success")} style={{backgroundColor:"greenyellow"}}  >Click For Success</button> */}
+            <button style={{backgroundColor:"red" , color:"white"}} onClick={() =>toast.error("Error")} >Click For Error</button>
+            <button onClick={() => toast.success("Success")} style={{backgroundColor:"greenyellow"}}  >Click For Success</button>
 
 
 

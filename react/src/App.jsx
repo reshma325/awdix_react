@@ -22,6 +22,7 @@ import Register from './components/Register';
 import PageNotFound from './components/PageNotFound'
 import ClassComponent from './components/ClassComponent';
 import Products from './components/Products';
+import NewSingleProdcut from './components/NewSingleProdcut';
 
 
 
@@ -51,8 +52,8 @@ function App() {
         <Route exact path='/childrencomponent' element={< ChildrenComponent />} />
         <Route exact path='/register' element={< Register />} />
         <Route exact path='/classcomponent' element={< ClassComponent />} />
-        
         <Route exact path='/products' element={< Products />} />
+        <Route exact path='/newsingleproduct/:id' element={< NewSingleProdcut />} />
       </Routes>
     </div>
   );
