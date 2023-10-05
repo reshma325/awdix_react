@@ -23,6 +23,7 @@ import PageNotFound from './components/PageNotFound'
 import ClassComponent from './components/ClassComponent';
 import Products from './components/Products';
 import NewSingleProdcut from './components/NewSingleProdcut';
+import AddProduct from './components/AddProduct';
 
 
 
@@ -54,6 +55,7 @@ function App() {
         <Route exact path='/classcomponent' element={< ClassComponent />} />
         <Route exact path='/products' element={< Products />} />
         <Route exact path='/newsingleproduct/:id' element={< NewSingleProdcut />} />
+        <Route exact path='/addproduct' element={< AddProduct />} />
       </Routes>
     </div>
   );

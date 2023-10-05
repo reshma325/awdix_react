@@ -17,3 +17,5 @@ class Person2 {
 const john = new Person2('John', 30);
 john.sayHello(); // logs "Hello, my name is John and I am 30 years old."
 john.myAge();
+
+

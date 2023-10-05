@@ -8,6 +8,7 @@ const Effect3 = () => {
     useEffect(()=>{alert('Rendered Effect 3')},[count]);
     const router= useNavigate();
   return (
+    
     <div>
 <h1>
     Counter : {count}
