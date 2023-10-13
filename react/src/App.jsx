@@ -5,7 +5,7 @@ import Login from './components/Login'
 import Homepage from './components/Homepage';
 import Count from './components/Count'
 import Effect1 from './components/Effect1';
-import Effect2 from './Effect2';
+import Effect2 from './components/Effect2';
 import Effect3 from './components/Effect3';
 import Effect4 from './components/Effect4';
 
@@ -24,6 +24,10 @@ import ClassComponent from './components/ClassComponent';
 import Products from './components/Products';
 import NewSingleProdcut from './components/NewSingleProdcut';
 import AddProduct from './components/AddProduct';
+import UseMemo from './components/UseMemo';
+import UseCallBack from './components/UseCallBack';
+import UseReducer from './components/UseReducer';
+import TestReducer from './components/TestReducer';
 
 
 
@@ -34,9 +38,9 @@ function App() {
     <div className="App">
       <Routes>
 
-        <Route path='*' element={<PageNotFound />} />
+        <Route exact path='*' element={<PageNotFound />} />
 
-        <Route path='/' element={<Homepage />} />
+        <Route exact path='/' element={<Homepage />} />
         <Route exact path='/login' element={< Login />} />
         <Route exact path='/count' element={< Count />} />
         <Route exact path='/effect1' element={< Effect1 />} />
@@ -56,6 +60,10 @@ function App() {
         <Route exact path='/products' element={< Products />} />
         <Route exact path='/newsingleproduct/:id' element={< NewSingleProdcut />} />
         <Route exact path='/addproduct' element={< AddProduct />} />
+        <Route exact path='/usememo' element={< UseMemo/>} />
+        <Route exact path='/usecallback' element={< UseCallBack/>} />
+        <Route exact path='/usereducer' element={<UseReducer />} />
+        <Route exact path='/testreducer' element={<TestReducer />} />
       </Routes>
     </div>
   );
