@@ -28,6 +28,8 @@ import UseMemo from './components/UseMemo';
 import UseCallBack from './components/UseCallBack';
 import UseReducer from './components/UseReducer';
 import TestReducer from './components/TestReducer';
+import CustomHook from './components/CustomHook';
+import CustomHookLS from './components/CustomHookLS';
 
 
 
@@ -64,6 +66,8 @@ function App() {
         <Route exact path='/usecallback' element={< UseCallBack/>} />
         <Route exact path='/usereducer' element={<UseReducer />} />
         <Route exact path='/testreducer' element={<TestReducer />} />
+        <Route exact path='/customhook' element={<CustomHook />} />
+        <Route exact path='/customhookls' element={<CustomHookLS />} />
       </Routes>
     </div>
   );
