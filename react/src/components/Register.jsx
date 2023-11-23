@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import toast from "react-hot-toast"
-import axios from "axios"
+
+import api from '../Helpers/AxiosConfig'
 
 const Register = () => {
     const router = useNavigate();
@@ -19,10 +20,11 @@ const Register = () => {
         //   alert("Data submitted to backend..")
         if(userData.name && userData.email && userData.password){
             if(userData.password.length>=8){
-                
-                        try{const response= await axios.post("http://localhost:3000/register",{userData});
+                console.log(userData)
+                        try{const response= await api.post("/auth/register",{userData});
+                      
                             if(response.data.success)
-                            {alert("Registration Successfull!!")
+                            {toast.success("Registration Successful!")
                                 setUserData({
                                 name:"",email:"",password:""
                             })

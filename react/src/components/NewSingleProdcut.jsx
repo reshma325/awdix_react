@@ -28,7 +28,7 @@ const NewSingleProdcut = () => {
                 <div id='image'>
                     <img src={prodcutData.image} alt='' />
                 </div>
-                <div id='text'>
+                <div id='text_'>
                     <h1> {prodcutData.title}</h1>
                     <h4> Category : {prodcutData.category}</h4>
                     <h4> Description : {prodcutData.description}</h4>
