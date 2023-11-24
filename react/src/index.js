@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import {Toaster} from 'react-hot-toast';
 import ParentAuthContext from './components/Context/AuthContext';
+import GlobalContext from './components/Context/GlobalContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -42,8 +43,11 @@ root.render(
     <ParentAuthContext>
 
 
+    <GlobalContext>
     <App />
+    </GlobalContext>
     </ParentAuthContext>
+   
     </BrowserRouter>
   
 );
