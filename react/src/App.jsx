@@ -1,5 +1,5 @@
 
-import './App.css';
+
 import { Routes, Route } from 'react-router-dom';
 import Login from './components/Login'
 import Homepage from './components/Homepage';
@@ -30,6 +30,12 @@ import UseReducer from './components/UseReducer';
 import TestReducer from './components/TestReducer';
 import CustomHook from './components/CustomHook';
 import CustomHookLS from './components/CustomHookLS';
+import YourProducts from './components/YourProducts';
+import UpdateProduct from './components/UpdateProduct';
+import Navbar from './components/Common/Navbar';
+import Profile from './components/Profile';
+import Cart from './components/Cart';
+
 
 
 
@@ -38,7 +44,9 @@ function App() {
   return (
 
     <div className="App">
+            <Navbar/>
       <Routes>
+  
 
         <Route exact path='*' element={<PageNotFound />} />
 
@@ -68,6 +76,12 @@ function App() {
         <Route exact path='/testreducer' element={<TestReducer />} />
         <Route exact path='/customhook' element={<CustomHook />} />
         <Route exact path='/customhookls' element={<CustomHookLS />} />
+        <Route exact path='/your_products' element={<YourProducts/>} />
+        <Route exact path='/update_product/:id' element={<UpdateProduct/>} />
+        <Route exact path='/profile' element={<Profile/>} />
+        <Route exact path='/viewCart' element={<Cart/>} />
+        
+
       </Routes>
     </div>
   );

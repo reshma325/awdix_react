@@ -1,4 +1,4 @@
-import axios from 'axios';
+import './Products.css'
 import React, { useEffect, useState } from 'react'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
@@ -8,11 +8,13 @@ import api from '../Helpers/AxiosConfig';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
+    console.log(products,"3.04")
     const router= useNavigate();
     useEffect(() => {
         async function getProducts() {
             try {
                 const { data } = await api.get('/product/getallproducts')
+             
                 if(data.success){
                     setProducts(data.products)
                 }
@@ -28,14 +30,21 @@ const Products = () => {
 
     },[])
     return (
-        <div>{products?.length? <div style={{display:'flex',flexWrap:"wrap", justifyContent:"space-around"}}>
+        <div>{products?.length? <div id='prod_main' >
             {products.map((pro)=>(
-                <div style={{width:"23%",height:"700px",cursor:"pointer"}} onClick={()=>router(`/newsingleproduct/${pro.id}`)}>
-                    <img style={{width:"80%",height:"300px",marginTop:"25px" ,padding:"15px",backgroundColor:"#f5f5f0",objectFit:"contain"}} src={pro.image} alt=''/>
-                    <h1 style={{fontSize:"20px", textAlign:"center", marginTop:"5px",padding:"15px",backgroundColor:"#f2f2f2",height:"110px"}}>Name: {pro.name}</h1>
-                    <h3 style={{fontSize:"18px", textAlign:"center",backgroundColor:"#f2f2f2"}}> Rs.{pro.price}</h3>
-                    <h3 style={{fontSize:"14px", textAlign:"center",backgroundColor:"#f2f2f2"}} >Category: {pro.category}</h3>
-                    <button style={{fontSize:"14px", textAlign:"center",width:"100px", height:"25px",marginTop:"5px"}} >View</button>
+              
+                <div id='prod'  onClick={()=>router(`/newsingleproduct/${pro._id}`)}>
+                    <img id='prod_img'  src={pro.image} alt='Product_Image Uavailable'/>
+                    <h1 id='prod_name' >{pro.name}</h1>
+                    <h3 id='prod_price'> ₹{pro.price}</h3>
+                    <h3 id='prod_category' >{pro.category}</h3>
+                    
+                   
+                    <div id='prod_button'>
+                        <p id='prod_b_1'>View</p>
+                        <p id='prod_b_1'>Buy</p>
+                    </div>
+                   
                 </div>
             ))}
             

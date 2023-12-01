@@ -8,8 +8,8 @@ function Login(){
 
     const router = useNavigate();
     const[userData,setUserData]=useState({email:"",password:""})
-    console.log("iiiiiiii",userData,setUserData)
-const {login,state}=useContext(AuthContext)
+    // console.log("iiiiiiii",userData,setUserData)
+const {login}=useContext(AuthContext)
     
     const handleChange=(event)=> {
         // console.log(event.target.value ,"value",event.target.name,"name")
@@ -22,11 +22,11 @@ const {login,state}=useContext(AuthContext)
         //   alert("Data submitted to backend..")
         if( userData.email && userData.password){
             if(userData.password.length>=8){
-                console.log(userData)
+                // console.log(userData)
                         try{const response= await api.post("/auth/login",{userData});
                       
                             if(response.data.success){
-                                localStorage.setItem("my token",JSON.stringify(response.data.token))
+                                localStorage.setItem("my-token",JSON.stringify(response.data.token))
                                 login(response.data.user);
                                 toast.success("Login Successful!")
                                 setUserData({
@@ -54,7 +54,7 @@ const {login,state}=useContext(AuthContext)
 
 
     return (
-        <div>
+        <div style={{paddingTop:"75px"}}>
             <h1>
                 Login
             </h1>

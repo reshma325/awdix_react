@@ -1,66 +1,113 @@
-
-#main{
+#s_main {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(248, 241, 231);
+    background-color: #feffff;
     height: 690px;
+    padding-top: 55px; 
+    color: #17252a;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
-#image{
+
+#image {
     width: 55%;
-    
+
     height: 640px;
     cursor: pointer;
-   
+
 }
-#image>img{
-    width: 85%;
+
+#image>img {
+    width: 100%;
     height: 90%;
-    margin-top: 50px;
+    margin-top: 40px;
+    object-fit: contain;
 }
-#text_{
-width: 35%;
-margin-top: 50px;
+
+#text_ {
+    /* border: 1px solid; */
+    width: 35%;
+    margin-top: 40px;
+  
 
 
 }
-#text_>h1{
-    text-align:start;
-    font-size: 28px;
-    font-weight: 400;
-   
+
+#t1 {
+    font-size: 25px;
+    text-transform: capitalize;
+    padding: 0px 8px;
+    width: auto;
+    height:auto;
+    line-height: 28px;
+    text-align: start;
+   margin-top: 20px;
+    font-weight: 600;
+
+
 
 }
-#text_>:nth-child(2),:nth-child(5),:nth-child(6){
+
+#t2 {
     /* text-align: start; */
-    font-size: 20px;
-    font-weight: 300;
-    
+    text-align: start;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    margin-top: 25px;
+    padding: 0px 8px;
+
+    color: #818181;
 }
-#text_>:nth-child(4){
-    text-align:start;
-    font-size: 22px;
-    font-weight: 700;
+
+#t4 {
+    padding: 8px 8px;
+    text-align: start;
+    font-size: 25px;
+    font-weight: 400;
+    /* padding: 5px; */
+    height: 22px;
+    margin-top: 20px;
+    /* border: 1px solid; */
+    line-height: 25px;
+
+}
+
+#t7 {
+    border: 1px  solid rgb(138, 138, 138);
+    /* border-bottom: 1px  solid rgb(138, 138, 138); */
+ 
+    width: 100%;
+    height: 30px;
+    background-color:#feffff;
+    /* border-radius: 4px; */
+    padding-top: 8px;
+    font-weight: 400;
+    margin-top: 100px;
     cursor: pointer;
 }
-#text_>:nth-child(3){
-    text-align: start;
-    font-size: 16px;
-    font-weight: 100;
-   font-style: italic;
+
+#t7:hover {
+    background-color: #def2f1;
+  
 }
-#text_>p{
-    border: 1px solid rgb(27, 11, 3);
-    margin-right: 100%;
-    width: 100px;
+#t7_1 {
+   
+    border: 1px  solid rgb(138, 138, 138);
+    border-top: none;
+    
+ 
+    width: 100%;
     height: 30px;
-    background-color:rgb(248, 241, 231);
-    border-radius: 4px;
+    background-color:#feffff;
+    /* border-radius: 4px; */
     padding-top: 8px;
-    font-weight: 400; 
-    cursor: pointer;   
-}
-#text_>p:hover{
-    background-color: rgb(192, 180, 165);
+    font-weight: 400;
+
+    cursor: pointer;
 }
 
-   
+#t7_1:hover {
+    background-color: #def2f1;
+
+}

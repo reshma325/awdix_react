@@ -1,0 +1,46 @@
+/* *{
+    margin: 0;
+    color: #def2f1;
+} */
+#nav_main{
+    width: 99.90%;
+    height: 40px;
+    padding-top: 13px;
+    /* border: 1px solid red; */
+    color: white;
+    background-color:#17252a;
+    position: fixed;
+    display: flex; 
+    justify-content: space-between;
+}
+#nav_left{
+    width: 20%;
+    cursor: pointer;
+}
+#nav_mid{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+
+}
+#nav_products{
+    width: 33%;
+    /* border: 1px solid white; */
+}
+#nav_product_actions{
+    width:66%;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    /* border: 1px solid white; */
+}
+#nav_right{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+#nav_profile,#nav_cart,#nav_logout,#nav_login {
+    cursor: pointer;
+}
+
