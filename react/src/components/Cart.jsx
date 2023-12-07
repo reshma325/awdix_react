@@ -25,6 +25,17 @@ const Cart = () => {
         }
 
     }
+    const deleteCartProducts=async(ProductId)=>{
+        try {
+            const response=await api.post('/user/deletecartproducts',{userId:state?.user?.id,ProductId})
+            if (response.data.success) {
+                toast.success(response.data.message)
+                setCart(response.data.products)
+            }
+        } catch (error) {
+            toast.error(error.response.data.message) 
+        }
+    }
 
     useEffect(() => {
 
@@ -53,7 +64,7 @@ const Cart = () => {
                         <div id='c_buttons'>
                             <p id='c_b'>CheckOut</p>
                             
-                            <p id='c_b' >Move To Wishlist</p>
+                            <p id='c_b'onClick={()=>deleteCartProducts(c._id)} >Delete</p>
 
                         </div>
                     </div>

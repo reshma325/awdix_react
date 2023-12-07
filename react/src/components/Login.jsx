@@ -39,8 +39,7 @@ const {login}=useContext(AuthContext)
 
                         }
                     }catch(error){
-                        toast.error(error?.message)
-                        console.log(error, "error here !")
+                        
                         
                     }
             }else{
